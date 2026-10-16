@@ -7,6 +7,6 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
-handl-plugin-compile = { path = "../plugin-compile" }
-plugin-engine = { path = "../plugin-engine" }
-serde_json = { workspace = true }
+handl-plugin-compile = { git = "https://github.com/handl-lang/platform", rev = "823b62ba272d0fe44d32bad521f30bcdf27067f6" }
+plugin-engine = { git = "https://github.com/handl-lang/platform", rev = "823b62ba272d0fe44d32bad521f30bcdf27067f6" }
+serde_json = "1"
