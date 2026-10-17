@@ -10,9 +10,10 @@ repository = "https://github.com/handl-lang/sexp"
 
 # ADR-0128 §Resolution: [patch] resolves the sibling checkout locally;
 # CI resolves the `branch = "main"` git deps (pinned to `rev` at release).
+[patch."https://github.com/handl-lang/kernel"]
+plugin-engine = { path = "../kernel/crates/plugin-engine" }
+
 [patch."https://github.com/handl-lang/platform"]
 handl-plugin-compile = { path = "../platform/crates/plugin-compile" }
-plugin-engine = { path = "../platform/crates/plugin-engine" }
-
 [profile.dev]
 opt-level = 1
