@@ -1,0 +1,189 @@
+name: compile-sexp
+path: modules/compile-sexp/src/output.rs
+purpose: compile-sexp
+api:
+- name: SexpOutput
+  kind: type
+  file: modules/compile-sexp/src/output.rs
+  line: 9
+  module: compile-sexp
+- name: new
+  kind: function
+  file: modules/compile-sexp/src/output.rs
+  line: 16
+  module: compile-sexp
+- name: target
+  kind: function
+  file: modules/compile-sexp/src/output.rs
+  line: 25
+  module: compile-sexp
+- name: artifacts
+  kind: function
+  file: modules/compile-sexp/src/output.rs
+  line: 29
+  module: compile-sexp
+- name: stream
+  kind: function
+  file: modules/compile-sexp/src/output.rs
+  line: 33
+  module: compile-sexp
+- name: SexpCompiler
+  kind: type
+  file: modules/compile-sexp/src/compiler.rs
+  line: 12
+  module: compile-sexp
+- name: compile
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 15
+  module: compile-sexp
+- name: target
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 29
+  module: compile-sexp
+- name: emit_sexp
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 34
+  module: compile-sexp
+- name: emit
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 40
+  module: compile-sexp
+- name: value_to_sexp
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 214
+  module: compile-sexp
+- name: source_to_sexp
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 218
+  module: compile-sexp
+- name: witness_to_sexp
+  kind: function
+  file: modules/compile-sexp/src/compiler.rs
+  line: 227
+  module: compile-sexp
+- name: SexpConfig
+  kind: type
+  file: modules/compile-sexp/src/config.rs
+  line: 9
+  module: compile-sexp
+- name: new
+  kind: function
+  file: modules/compile-sexp/src/config.rs
+  line: 13
+  module: compile-sexp
+- name: default
+  kind: function
+  file: modules/compile-sexp/src/config.rs
+  line: 19
+  module: compile-sexp
+- name: as_any
+  kind: function
+  file: modules/compile-sexp/src/config.rs
+  line: 25
+  module: compile-sexp
+- name: target
+  kind: function
+  file: modules/compile-sexp/src/config.rs
+  line: 29
+  module: compile-sexp
+- name: compiler
+  kind: module
+  file: modules/compile-sexp/src/lib.rs
+  line: 6
+  module: compile-sexp
+- name: config
+  kind: module
+  file: modules/compile-sexp/src/lib.rs
+  line: 7
+  module: compile-sexp
+- name: output
+  kind: module
+  file: modules/compile-sexp/src/lib.rs
+  line: 8
+  module: compile-sexp
+deps:
+- handl_plugin_compile
+- handl_plugin_compile
+- plugin_engine
+- serde_json
+- handl_plugin_compile
+- compiler
+- config
+- output
+notes: ''
+verify:
+- modules/compile-sexp/src/output.rs
+- modules/compile-sexp/src/output.rs
+- modules/compile-sexp/src/output.rs
+- modules/compile-sexp/src/output.rs
+- modules/compile-sexp/src/output.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/compiler.rs
+- modules/compile-sexp/src/config.rs
+- modules/compile-sexp/src/config.rs
+- modules/compile-sexp/src/config.rs
+- modules/compile-sexp/src/config.rs
+- modules/compile-sexp/src/config.rs
+- modules/compile-sexp/src/lib.rs
+- modules/compile-sexp/src/lib.rs
+- modules/compile-sexp/src/lib.rs
+provenance:
+  files:
+  - modules/compile-sexp/src/output.rs
+  - modules/compile-sexp/src/output.rs
+  - modules/compile-sexp/src/output.rs
+  - modules/compile-sexp/src/output.rs
+  - modules/compile-sexp/src/output.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/config.rs
+  - modules/compile-sexp/src/config.rs
+  - modules/compile-sexp/src/config.rs
+  - modules/compile-sexp/src/config.rs
+  - modules/compile-sexp/src/config.rs
+  - modules/compile-sexp/src/lib.rs
+  - modules/compile-sexp/src/lib.rs
+  - modules/compile-sexp/src/lib.rs
+  hashes:
+  - a09853df8093f770631890f72078dc3440e168a4
+  - a09853df8093f770631890f72078dc3440e168a4
+  - a09853df8093f770631890f72078dc3440e168a4
+  - a09853df8093f770631890f72078dc3440e168a4
+  - a09853df8093f770631890f72078dc3440e168a4
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - cf57555cfb67d51847396ec273f59a7c64275b60
+  - cf57555cfb67d51847396ec273f59a7c64275b60
+  - cf57555cfb67d51847396ec273f59a7c64275b60
+  - cf57555cfb67d51847396ec273f59a7c64275b60
+  - cf57555cfb67d51847396ec273f59a7c64275b60
+  - 53ea3fdd9f26198b863dbf897854ea0cf2fa3f47
+  - 53ea3fdd9f26198b863dbf897854ea0cf2fa3f47
+  - 53ea3fdd9f26198b863dbf897854ea0cf2fa3f47
+  commit_sha: 1930bcd502a8aac95cd3fb60fa88ffc4b21059f9
+  generated_at: '1792281251'
+  generator: kuda-template/0.1.0

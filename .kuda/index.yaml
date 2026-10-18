@@ -1,0 +1,28 @@
+name: sexp
+root: /home/luis/GitHub/handl-lang/sexp
+purpose: ''
+modules:
+- compile-sexp
+- handl-plugin-compile-sexp
+- sexp
+commands:
+- cargo check
+- cargo test --workspace
+provenance:
+  files:
+  - Cargo.toml
+  - modules/compile-sexp/Cargo.toml
+  - modules/compile-sexp/src/output.rs
+  - modules/compile-sexp/src/compiler.rs
+  - modules/compile-sexp/src/config.rs
+  - modules/compile-sexp/src/lib.rs
+  hashes:
+  - 8ff8e0711cd0d925c191c5550ef3f6375062919b
+  - dbfeeb5d9d0a81c5b7cae04ee5760fc430c936a2
+  - a09853df8093f770631890f72078dc3440e168a4
+  - 28c89b6bc5c2879aa638caa838771f668df4a633
+  - cf57555cfb67d51847396ec273f59a7c64275b60
+  - 53ea3fdd9f26198b863dbf897854ea0cf2fa3f47
+  commit_sha: 1930bcd502a8aac95cd3fb60fa88ffc4b21059f9
+  generated_at: '1792281251'
+  generator: kuda/0.1.0

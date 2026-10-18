@@ -1,7 +1,7 @@
 //! The `SexpCompiler` implementation.
 
 use handl_plugin_compile::{CompileError, Compiler, CompilerConfig, CompilerInput, CompilerOutput};
-use plugin_engine::{ArrSource, RewriteWitness, Term};
+use hnl_engine::{ArrSource, RewriteWitness, Term};
 use serde_json::Value;
 
 use crate::config::SexpConfig;

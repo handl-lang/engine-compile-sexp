@@ -8,5 +8,5 @@ repository.workspace = true
 
 [dependencies]
 handl-plugin-compile = { git = "https://github.com/handl-lang/platform", branch = "main" }
-plugin-engine = { git = "https://github.com/handl-lang/kernel", branch = "main" }
+hnl-engine = { git = "https://github.com/handl-lang/engine", branch = "main" }
 serde_json = "1"

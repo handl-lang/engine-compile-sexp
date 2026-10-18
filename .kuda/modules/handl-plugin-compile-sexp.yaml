@@ -1,0 +1,24 @@
+name: handl-plugin-compile-sexp
+path: modules/compile-sexp/Cargo.toml
+purpose: S-expression compiler for `Term` arrow graphs (ADR-0114).
+api:
+- name: handl-plugin-compile-sexp
+  kind: module
+  file: modules/compile-sexp/Cargo.toml
+  line: 1
+  module: handl-plugin-compile-sexp
+deps:
+- handl-plugin-compile
+- plugin-engine
+- serde_json
+notes: ''
+verify:
+- modules/compile-sexp/Cargo.toml
+provenance:
+  files:
+  - modules/compile-sexp/Cargo.toml
+  hashes:
+  - dbfeeb5d9d0a81c5b7cae04ee5760fc430c936a2
+  commit_sha: 1930bcd502a8aac95cd3fb60fa88ffc4b21059f9
+  generated_at: '1792281251'
+  generator: kuda-template/0.1.0

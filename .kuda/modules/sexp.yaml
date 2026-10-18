@@ -1,0 +1,21 @@
+name: sexp
+path: Cargo.toml
+purpose: sexp
+api:
+- name: sexp
+  kind: module
+  file: Cargo.toml
+  line: 1
+  module: sexp
+deps: []
+notes: ''
+verify:
+- Cargo.toml
+provenance:
+  files:
+  - Cargo.toml
+  hashes:
+  - 8ff8e0711cd0d925c191c5550ef3f6375062919b
+  commit_sha: 1930bcd502a8aac95cd3fb60fa88ffc4b21059f9
+  generated_at: '1792281251'
+  generator: kuda-template/0.1.0
