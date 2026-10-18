@@ -11,7 +11,7 @@ arrow graphs is one target, not platform machinery.
 `sexp` owns the S-expression compiler: `handl-plugin-compile-sexp` (target
 `sexp`) — here as `modules/compile-sexp`.
 
-`platform` keeps the port and the registry seam.
+`host` keeps the port and the registry seam.
 
 ## Consequences
 
