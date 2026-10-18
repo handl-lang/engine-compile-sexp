@@ -19,5 +19,5 @@ hnl-engine = { path = "../engine" }
 
 [patch."https://github.com/handl-lang/kernel"]
 
-[patch."https://github.com/handl-lang/platform"]
-handl-plugin-compile = { path = "../platform/crates/plugin-compile" }
+[patch."https://github.com/handl-lang/host"]
+handl-plugin-compile = { path = "../host/crates/plugin-compile" }
