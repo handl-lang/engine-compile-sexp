@@ -3,6 +3,7 @@ title: '`compile-sexp` target'
 type: adr
 date: 2026-10-16
 status: accepted
+status_note: Accepted — extracted in ADR-0128 Phase 7.
 ---
 
 # ADR-0141: `compile-sexp` target
@@ -25,7 +26,3 @@ arrow graphs is one target, not platform machinery.
 - The `sexp` target name is preserved (repo ≠ target).
 - Like the other `Term`-reading targets, it depends on the `Term` shape fixed
   by `term`, not on a specific consumer.
-
-## Status
-
-Accepted — extracted in ADR-0128 Phase 7.
