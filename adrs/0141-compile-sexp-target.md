@@ -1,3 +1,10 @@
+---
+title: '`compile-sexp` target'
+type: adr
+date: 2026-10-16
+status: accepted
+---
+
 # ADR-0141: `compile-sexp` target
 
 ## Context
