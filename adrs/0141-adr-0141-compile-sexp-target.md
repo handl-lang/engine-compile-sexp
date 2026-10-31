@@ -1,3 +1,10 @@
++++
+id = "ADR-0141"
+title = "ADR-0141: `compile-sexp` target"
+status = "open"
+priority = "medium"
++++
+
 ---
 title: '`compile-sexp` target'
 type: adr
