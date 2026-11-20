@@ -1,6 +1,6 @@
-# compile-sexp
+# engine-compile-sexp
 
-S-expression compiler for `Term` arrow graphs — part of the `compile-*`
+S-expression compiler for `Term` arrow graphs — part of the `engine-compile-*`
 compiler-backend family: consumes Handl `Term` arrow terms and emits
 s-expression source.
 
