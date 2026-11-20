@@ -5,6 +5,9 @@ edition.workspace = true
 description = "S-expression compiler for `Term` arrow graphs (ADR-0114)."
 license.workspace = true
 repository.workspace = true
+readme = "../../README.md"
+keywords = ["handl", "s-expression", "compiler"]
+categories = ["compilers"]
 
 [dependencies]
 handl-plugin-compile = { git = "https://github.com/handl-lang/host", branch = "main" }

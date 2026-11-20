@@ -1,10 +1,21 @@
-# sexp
+# compile-sexp
 
-Part of the `handl-lang` org split (ADR-0128) — the `sexp` target repo.
-It holds `modules/compile-sexp`; the project docs live on the `project`
-branch, mounted at `project/` (ADR-0129).
+S-expression compiler for `Term` arrow graphs — part of the `compile-*`
+compiler-backend family: consumes Handl `Term` arrow terms and emits
+s-expression source.
+
+The crate lives in `modules/compile-sexp` inside this workspace.
+
+## Development
 
 ```bash
-git worktree list        # main + project
-git -C project log       # docs history
+cargo xtask gate        # fmt --check → clippy -D warnings → test → doc
 ```
+
+`cargo xtask` wraps the repo's `xtask/` crate (`fmt`, `clippy`, `test`, `doc`,
+`check`, `gate`); `ci.sh` is the gate entry. Deps resolve from git, so no
+sibling checkouts are needed; a plain clone test-runs as-is.
+
+## License
+
+MIT.
