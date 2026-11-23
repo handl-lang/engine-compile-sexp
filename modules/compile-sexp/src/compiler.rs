@@ -147,6 +147,7 @@ fn emit(term: &Term, out: &mut String) {
             body,
             target,
             impl_,
+            acc,
         } => {
             out.push_str("(handle ");
             emit(body, out);
@@ -154,6 +155,12 @@ fn emit(term: &Term, out: &mut String) {
             out.push_str(target);
             out.push(' ');
             emit(impl_, out);
+            // Optional handler accumulator seed — emitted as a 4th
+            // element only when present.
+            if let Some(acc) = acc {
+                out.push(' ');
+                emit(acc, out);
+            }
             out.push(')');
         }
         Term::Rewrite {
