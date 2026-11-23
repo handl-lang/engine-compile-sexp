@@ -2,6 +2,7 @@
 
 use handl_plugin_compile::{CompileError, Compiler, CompilerConfig, CompilerInput, CompilerOutput};
 use hnl_engine::{ArrSource, RewriteWitness, Term};
+use hnl_engine_codegen::{ArtifactRef, Change, CodegenError, EmitContext, Emitter};
 use serde_json::Value;
 
 use crate::config::SexpConfig;
@@ -28,6 +29,19 @@ impl Compiler for SexpCompiler {
 
     fn target(&self) -> &str {
         "sexp"
+    }
+}
+
+/// `Emitter<Term>` over the desired-state codegen kernel (PL-004 T-092):
+/// the same render as [`SexpCompiler::compile`], expressed as a `Change`
+/// set (`main.sexp`) with no side effects. The legacy `Compiler` impl
+/// stays until `handl-plugin-compile` migrates to the kernel pipeline.
+impl Emitter<Term> for SexpCompiler {
+    fn materialize(&self, ir: &Term, _req: &EmitContext) -> Result<Vec<Change>, CodegenError> {
+        Ok(vec![Change::text(
+            ArtifactRef::new("main.sexp"),
+            emit_sexp(ir),
+        )])
     }
 }
 
@@ -230,5 +244,45 @@ fn witness_to_sexp(witness: &RewriteWitness) -> String {
         RewriteWitness::Compute => "compute".to_string(),
         RewriteWitness::HandlerHint => "handler-hint".to_string(),
         RewriteWitness::Cast => "cast".to_string(),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    fn fixture() -> Term {
+        Term::Seq {
+            axis: Box::new(Term::constant(json!(0))),
+            fst: Box::new(Term::op_native("id", vec![])),
+            snd: Box::new(Term::op_native_lit("elem", vec![], json!(1))),
+        }
+    }
+
+    #[test]
+    fn materialize_emits_main_sexp_matching_render() {
+        let term = fixture();
+        let changes = SexpCompiler
+            .materialize(&term, &EmitContext::new())
+            .expect("materialize");
+        assert_eq!(changes.len(), 1);
+        match &changes[0] {
+            Change::Put {
+                artifact, content, ..
+            } => {
+                assert_eq!(artifact.as_str(), "main.sexp");
+                assert_eq!(
+                    String::from_utf8(content.clone()).unwrap(),
+                    emit_sexp(&term)
+                );
+                assert!(
+                    String::from_utf8(content.clone())
+                        .unwrap()
+                        .starts_with("(seq ")
+                );
+            }
+            other => panic!("expected Put, got {other:?}"),
+        }
     }
 }
